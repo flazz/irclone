@@ -14,5 +14,5 @@ Feature: chat in a channel
 
   Scenario: chat with others in a channel
     Given some user "leo" says "hi there neo!" in "matrix"
-    When I wait 1 second
+    When I am on the matrix channel page
     Then I should see "leo: hi there neo!" within "#log"
