@@ -1,5 +1,8 @@
-= render :partial => 'log'
+#log_container
+  = render :partial => 'log'
 
 = form_for channel_path(@channel.key), :remote => true do
   = text_field_tag :message
   = submit_tag 'send'
+
+%p enter text and hit send

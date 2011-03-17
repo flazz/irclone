@@ -1,6 +1,6 @@
 $(document).ready( function(){
   setInterval(function(){
-    $('ul#log').load(document.location.pathname + ' ul#log');
+    $('#log_container').load(document.location.pathname + ' ul#log');
   }, 500);
 });
 

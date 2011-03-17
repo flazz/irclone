@@ -1,4 +1,4 @@
 Irclone
 =======
 
-simple rails app to allow irc like chat
+simple rails 3 app to allow irc like chat
