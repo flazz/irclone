@@ -6,4 +6,14 @@
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
+
+    %nav
+      = form_tag disconnect_path do
+        = submit_tag 'disconnect'
+
+    - if flash[:notice]
+      .notice= flash.notice
+    - if flash[:alert]
+      .notice.alert= flash.alert
+
     = yield

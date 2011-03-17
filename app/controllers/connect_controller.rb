@@ -6,8 +6,14 @@ class ConnectController < ApplicationController
   end
 
   def connect
-    session['nick'] = params['nick']
-    redirect_to({:controller => :channels, :action => :index}, :notice => "goodbye #{@nick}")
+
+    if params['nick']
+      session['nick'] = params['nick']
+      redirect_to({:controller => :channels, :action => :index}, :notice => "welcome #{session['nick']}")
+    else
+      render :nothing => true, status => 400
+    end
+
   end
 
   def disconnect
