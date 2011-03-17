@@ -1,0 +1,53 @@
+$green: #6c3
+
+body
+  font-family: sans-serif
+  font-weight: medium
+
+ul
+  padding: 1em
+
+li
+  list-style-type: none
+  font-family: monospace
+  font-size: 18pt
+  padding: 1ex
+
+a
+  color: $green
+  text-decoration: none
+  &:hover
+    color: $green * 1.2
+  &:active
+    color: $green
+
+label
+  font-family: 'Helvetica'
+  font-size: 24pt
+
+input
+  font-family: 'Helvetica'
+  font-size: 24pt
+  border: none
+  background-color: $green
+  color: white
+  border-radius: 3px
+
+input[type='submit']
+  font-family: 'Helvetica'
+  font-size: 24pt
+  background-color: #6c3
+  color: white
+  border: none
+  font-weight: bold
+  cursor: pointer
+  border-radius: 3px
+
+form[action='/disconnect']
+  display: inline-block
+
+  input[type='submit']
+    font-size: inherit
+    border: thin $green solid
+    color: $green
+    background: white

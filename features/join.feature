@@ -5,7 +5,7 @@ Feature: join a channel
 
   Scenario: an arbitrary channel
     Given I am on the channels page
-    And I fill in "channel" with "matrix"
+    And I fill in "channel_name" with "matrix"
     When I press "join"
     Then I should be on the matrix channel page
     And I should see "joined matrix" within ".notice"
@@ -13,5 +13,5 @@ Feature: join a channel
   Scenario: a recently visited channel
     Given there is a recent channel named "realworld"
     And I am on the channels page
-    When I follow "realworld"
+    When I follow "realworld" within ".recent_channels"
     Then I should be on the realworld channel page
