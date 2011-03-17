@@ -6,8 +6,8 @@ simple rails app to allow irc like chat
 goals
 -----
 
-1 testing with multiple capybara sessions
-2 use redis-objects
+1. testing with multiple capybara sessions
+2. use redis-objects
 
 notes
 -----
