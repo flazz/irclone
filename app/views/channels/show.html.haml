@@ -1,7 +1,5 @@
-%ul#log
-  - @channel.each do |m|
-    %li= m
+= render :partial => 'log'
 
-= form_for channel_path(@channel.key) do
+= form_for channel_path(@channel.key), :remote => true do
   = text_field_tag :message
   = submit_tag 'send'

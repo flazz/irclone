@@ -17,7 +17,11 @@ class ChannelsController < ApplicationController
     @channel = Channel.new params['id']
     message = params['message']
     @channel << "#{@nick}: #{message}"
-    redirect_to :action => :show
+
+    respond_to do |format|
+      format.html { redirect_to :action => :show }
+      format.js
+    end
   end
 
 end

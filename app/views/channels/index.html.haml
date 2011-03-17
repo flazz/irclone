@@ -1,7 +1,9 @@
 = form_for :channel do |f|
-  = f.label :name, 'channel'
   = f.text_field :name
   = f.submit 'join'
 
-- Channel.recents.each do |id|
-  = link_to id, channel_path(id)
+%h2 recent channels
+
+%ul.recent_channels
+  - Channel.recents.each do |id|
+    %li= link_to id, channel_path(id)

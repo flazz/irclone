@@ -8,8 +8,14 @@
   %body
 
     %nav
-      = form_tag disconnect_path do
-        = submit_tag 'disconnect'
+      - if @nick or @channel
+        %h1
+          - if @nick
+            connected as
+            %em= @nick
+          - if @channel
+            on
+            %em= @channel.key
 
     - if flash[:notice]
       .notice= flash.notice
@@ -17,3 +23,10 @@
       .notice.alert= flash.alert
 
     = yield
+
+    %hr
+
+    = link_to 'channels', channels_path
+
+    = form_tag disconnect_path do
+      = submit_tag 'disconnect'
