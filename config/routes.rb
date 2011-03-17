@@ -4,6 +4,8 @@ Irclone::Application.routes.draw do
   post 'connect' => 'connect#connect'
   post 'disconnect' => 'connect#disconnect'
 
+  resources :channels
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -53,7 +55,7 @@ Irclone::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "channels#index"
+  root :to => 'channels#index'
 
   # See how all your routes lay out with "rake routes"
 
