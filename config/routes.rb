@@ -4,6 +4,7 @@ Irclone::Application.routes.draw do
   post 'connect' => 'connect#connect'
   post 'disconnect' => 'connect#disconnect'
 
+  post 'channels/:id' => 'channels#update'
   resources :channels
 
   # The priority is based upon order of creation:

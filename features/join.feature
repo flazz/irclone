@@ -10,7 +10,6 @@ Feature: join a channel
     Then I should be on the matrix channel page
     And I should see "joined matrix" within ".notice"
 
-  @wip
   Scenario: a recently visited channel
     Given there is a recent channel named "realworld"
     And I am on the channels page
