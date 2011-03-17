@@ -1,4 +1,5 @@
 Given /^there is a recent channel named "([^"]*)"$/ do |name|
-  pending # express the regexp above with the code you wish you had
+  c = Channel.new name
+  c.should be_recent
 end
 
