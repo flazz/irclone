@@ -1,6 +1,6 @@
 class Channel < Redis::List
 
-  @@recents = Redis::List.new 'recent_channels', :maxlength => RECENT_CHANNELS_MAX
+  @@recents = Redis::Set.new 'recent_channels'
 
   def self.recents
     @@recents
