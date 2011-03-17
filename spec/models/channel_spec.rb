@@ -13,4 +13,9 @@ describe Channel do
     c.should_not be_recent
   end
 
+  it "should maintain a list of recents" do
+    RECENT_CHANNELS_MAX.times { |n| Channel.new "recent_#{n}" }
+    Channel.recents.size.should == RECENT_CHANNELS_MAX
+  end
+
 end
